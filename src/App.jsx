@@ -1,8 +1,16 @@
+import { Route, Routes } from "react-router-dom";
+import Home from "./pages/Home";
+import MainLayout from "./layout/MainLayout";
+import Contact from "./pages/Contact";
+
 function App() {
   return (
-    <>
-      <h1 className="text-3xl font-bold underline">Tailwind 2</h1>
-    </>
+    <MainLayout>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
+    </MainLayout>
   );
 }
 
