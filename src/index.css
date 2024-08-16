@@ -1,3 +1,64 @@
+@import url("https://fonts.cdnfonts.com/css/ica-rubrik-black");
+@import url("https://fonts.cdnfonts.com/css/poppins");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer utilities {
+  .transform-style-3d {
+    transform-style: preserve-3d;
+  }
+
+  .animate-autoRun {
+    animation: autoRun 12s linear infinite;
+  }
+
+  @keyframes autoRun {
+    from {
+      transform: rotateX(-16deg) rotateY(0deg);
+    }
+    to {
+      transform: rotateX(-16deg) rotateY(360deg);
+    }
+  }
+}
+
+@layer components {
+  .banner {
+    @apply w-full h-screen text-center overflow-hidden relative;
+    transform-style: preserve-3d;
+  }
+
+  .scene {
+    @apply absolute inset-0;
+    transform-style: preserve-3d;
+    perspective: -1000px;
+  }
+
+  .slider {
+    @apply absolute top-[30%] left-[calc(50%-100px)] animate-autoRun;
+    @apply transform-style-3d;
+    transform: translateZ(-100px);
+    width: 200px;
+    height: 250px;
+  }
+
+  .slider .item {
+    @apply absolute inset-0;
+    transform: rotateY(calc((var(--position) - 1) * (360deg / var(--quantity))))
+      translateZ(180px);
+  }
+
+  .model {
+    @apply absolute left-1/2 top-[30%] bg-no-repeat bg-center;
+    width: 300px;
+    height: 380px;
+    background-image: url("/foto-web.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    transform: translateX(-50%) translateY(-50%) translateZ(0);
+    position: absolute;
+    z-index: 2;
+  }
+}

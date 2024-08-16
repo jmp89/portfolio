@@ -1,15 +1,11 @@
-import Titlebar from "../components/Titlebar";
+import Banner3D from "../components/Banner3D/Banner3D";
+// import Titlebar from "../components/Titlebar";
 
-// TODO: DAR GRADIENT A LA IMAGEN
 const Home = () => {
   return (
     <>
-      <Titlebar text={"WELCOME"} />
-
-      <img
-        src="/foto-web.png"
-        className="bg-gradient-to-l from-transparent to-neutral-700 "
-      />
+      {/* <Titlebar text={"WELCOME"} /> */}
+      <Banner3D />
     </>
   );
 };

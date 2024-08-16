@@ -1,6 +1,6 @@
 import { useState } from "react";
-import HeaderButton from "../components/HeaderButton";
-import HeaderMenuMobileButton from "../components/HeaderMenuMobileButton";
+import HeaderButton from "../components/Header/HeaderButton";
+import HeaderMenuMobileButton from "../components/Header/HeaderMenuMobileButton";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
