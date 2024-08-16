@@ -45,7 +45,7 @@
   }
 
   .slider .item {
-    @apply absolute inset-0;
+    @apply absolute inset-0 cursor-default;
     transform: rotateY(calc((var(--position) - 1) * (360deg / var(--quantity))))
       translateZ(180px);
   }
@@ -60,5 +60,14 @@
     transform: translateX(-50%) translateY(-50%) translateZ(0);
     position: absolute;
     z-index: 2;
+  }
+
+  @media (min-width: 640px) {
+    .slider .item {
+      transform: rotateY(
+          calc((var(--position) - 1) * (360deg / var(--quantity)))
+        )
+        translateZ(240px);
+    }
   }
 }

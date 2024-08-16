@@ -1,4 +1,4 @@
-const Card = ({ text }) => {
+const Card = ({ text, Icon }) => {
   return (
     <svg
       width="100%"
@@ -21,15 +21,26 @@ const Card = ({ text }) => {
       />
       <text
         x="50%"
-        y="55%"
-        fontSize="2.5rem"
-        fontWeight="bold"
+        y="40%"
+        fontSize="1.4rem"
         fill="#FF8800"
         textAnchor="middle"
-        transform="rotate(90, 100, 150)"
       >
         {text}
       </text>
+      <foreignObject x="0" y="130" width="200" height="100">
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "start",
+            height: "100%",
+            color: "#FF8800",
+          }}
+        >
+          <Icon size="5rem" />
+        </div>
+      </foreignObject>
     </svg>
   );
 };
