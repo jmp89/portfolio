@@ -11,7 +11,7 @@
   }
 
   .animate-autoRun {
-    animation: autoRun 12s linear infinite;
+    animation: autoRun 9s linear infinite;
   }
 
   @keyframes autoRun {

@@ -1,0 +1,17 @@
+.page-enter {
+  @apply opacity-0 translate-y-4;
+}
+
+.page-enter-active {
+  @apply opacity-100 translate-y-0;
+  transition: opacity 300ms ease-in, transform 300ms ease-in;
+}
+
+.page-exit {
+  @apply opacity-100 translate-y-0;
+}
+
+.page-exit-active {
+  @apply opacity-0 translate-y-4;
+  transition: opacity 300ms ease-in, transform 300ms ease-in;
+}
