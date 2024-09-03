@@ -3,7 +3,7 @@ import HeaderButton from "./HeaderButton";
 const menuItems = [
   { name: "Inicio", url: "#home" },
   { name: "Experiencia", url: "#experience" },
-  { name: "Estudios", url: "#projects" },
+  { name: "Estudios", url: "#achievements" },
   { name: "Contacto", url: "#contact" },
 ];
 

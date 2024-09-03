@@ -6,7 +6,7 @@ const Experience = () => {
   return (
     <>
       <section className="relative p-8">
-        <Titlebar text={"EXPERIENCE"} className={"-top-10"} />
+        <Titlebar text={"EXPERIENCIA"} className={"-top-10"} />
         <article>
           <TextBox title={"HackaVerse"}>
             <p className="pr-6">
