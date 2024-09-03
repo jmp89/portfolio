@@ -2,7 +2,7 @@ import { useRef } from "react";
 import { motion } from "framer-motion";
 import Home from "./pages/Home";
 import Contact from "./pages/Contact";
-import Projects from "./pages/Achievements";
+import Achievements from "./pages/Achievements";
 import Experience from "./pages/Experience";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
@@ -12,10 +12,10 @@ import AnimatedSection from "./components/AnimatedSection";
 function App() {
   const homeRef = useRef(null);
   const experienceRef = useRef(null);
-  const projectsRef = useRef(null);
+  const achievementsRef = useRef(null);
   const contactRef = useRef(null);
 
-  const sectionRefs = [homeRef, experienceRef, projectsRef, contactRef];
+  const sectionRefs = [homeRef, experienceRef, achievementsRef, contactRef];
   const activeId = useIntersectionObserver(sectionRefs);
 
   return (
@@ -28,8 +28,8 @@ function App() {
         <AnimatedSection id="experience" ref={experienceRef}>
           <Experience />
         </AnimatedSection>
-        <AnimatedSection id="projects" ref={projectsRef}>
-          <Projects />
+        <AnimatedSection id="achievements" ref={achievementsRef}>
+          <Achievements />
         </AnimatedSection>
         <AnimatedSection id="contact" ref={contactRef}>
           <Contact />
