@@ -19,9 +19,9 @@ const texts = [
   { text: "Tailwind", icon: SiTailwindcss },
 ];
 
-const Banner3D = () => {
+const Banner3D = ({ className }) => {
   return (
-    <section className="banner">
+    <section className={`banner ${className}`}>
       <div className="scene">
         <div className="slider">
           {texts.map(({ text, icon: Icon }, index) => (
@@ -31,6 +31,7 @@ const Banner3D = () => {
               style={{
                 "--position": index + 1,
                 "--quantity": texts.length,
+                "--imageModel": `${import.meta.env.VITE_MODEL_IMAGE}`,
                 zIndex: index < texts.length / 2 ? 1 : 3,
               }}
             >
@@ -38,7 +39,12 @@ const Banner3D = () => {
             </div>
           ))}
         </div>
-        <div className="model"></div>
+        <div
+          className="model"
+          style={{
+            backgroundImage: `url(${import.meta.env.VITE_MODEL_IMAGE})`,
+          }}
+        ></div>
       </div>
     </section>
   );

@@ -1,14 +1,12 @@
-import { NavLink } from "react-router-dom";
-
 const HeaderButton = ({ to, extraClass, text, onClick }) => {
   return (
-    <NavLink
-      to={to}
+    <a
+      href={to}
       className={`underline-offset-4 hover:text-white rounded-md font-medium text-xl ${extraClass}`}
       onClick={onClick}
     >
       {text}
-    </NavLink>
+    </a>
   );
 };
 export default HeaderButton;

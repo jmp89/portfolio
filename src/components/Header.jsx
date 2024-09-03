@@ -2,7 +2,7 @@ import { useState } from "react";
 import HeaderMenuMobileButton from "../components/Header/HeaderMenuMobileButton";
 import NavLinks from "../components/Header/NavLinks";
 
-const Header = () => {
+const Header = ({ activeId }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -14,7 +14,7 @@ const Header = () => {
   };
 
   return (
-    <nav className="relative">
+    <nav className="relative z-30">
       <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Botón de menú móvil */}
@@ -22,7 +22,7 @@ const Header = () => {
             <button
               onClick={toggleMenu}
               type="button"
-              className="inline-flex items-center justify-center p-2 rounded-md hover:bg-black focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+              className="inline-flex items-center justify-center p-2 rounded-md hover:text-orange-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
               aria-controls="mobile-menu"
               aria-expanded={isOpen}
             >
@@ -38,8 +38,8 @@ const Header = () => {
       </div>
 
       {/* Menú de escritorio */}
-      <div className="hidden sm:flex fixed left-0 top-1/2 transform -translate-y-1/2 flex-col space-y-4 pl-4 z-10">
-        <NavLinks isMobile={false} />
+      <div className="hidden sm:flex fixed left-0 top-1/4 transform -translate-y-1/2 flex-col space-y-4 pl-4 z-10">
+        <NavLinks isMobile={false} activeId={activeId} />
       </div>
 
       {/* Menú móvil */}
@@ -48,7 +48,7 @@ const Header = () => {
           isOpen ? "translate-x-0" : "translate-x-full"
         } transition-transform duration-300 ease-in-out z-20`}
       >
-        <div className="px-4 pt-4 pb-3 flex flex-col space-y-4 items-center justify-center h-full">
+        <div className="px-4 pt-4 pb-3 flex flex-col space-y-4 items-center justify-center h-[90%]">
           <button
             onClick={toggleMenu}
             type="button"
@@ -62,6 +62,7 @@ const Header = () => {
             className="text-base"
             isMobile={true}
             closeMenu={closeMenu}
+            activeId={activeId}
           />
         </div>
       </div>

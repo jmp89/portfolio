@@ -1,16 +1,13 @@
-import { useState } from "react";
 import HeaderButton from "./HeaderButton";
 
 const menuItems = [
-  { name: "Home", url: "/" },
-  { name: "Projects", url: "/projects" },
-  { name: "Experience", url: "/experience" },
-  { name: "Contact", url: "/contact" },
+  { name: "Inicio", url: "#home" },
+  { name: "Experiencia", url: "#experience" },
+  { name: "Estudios", url: "#projects" },
+  { name: "Contacto", url: "#contact" },
 ];
 
-const NavLinks = ({ isMobile, closeMenu }) => {
-  const [active, setActive] = useState(0);
-
+const NavLinks = ({ isMobile, closeMenu, activeId }) => {
   return (
     <nav>
       <ul
@@ -24,10 +21,11 @@ const NavLinks = ({ isMobile, closeMenu }) => {
               to={menuItem.url}
               text={menuItem.name}
               extraClass={
-                active === i ? "text-white underline decoration-orange-500" : ""
+                menuItem.url === `#${activeId}`
+                  ? "text-white underline decoration-orange-500"
+                  : ""
               }
               onClick={() => {
-                setActive(i);
                 isMobile && closeMenu();
               }}
             />

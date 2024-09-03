@@ -26,7 +26,7 @@
 
 @layer components {
   .banner {
-    @apply w-full h-screen text-center overflow-hidden relative;
+    @apply w-full h-[90%] text-center relative;
     transform-style: preserve-3d;
   }
 
@@ -54,10 +54,9 @@
     @apply absolute left-1/2 top-[30%] bg-no-repeat bg-center;
     width: 300px;
     height: 380px;
-    background-image: url("/foto-web.png");
     background-size: cover;
     background-repeat: no-repeat;
-    transform: translateX(-50%) translateY(-50%) translateZ(0);
+    transform: translateX(-50%) translateY(-40%) translateZ(0);
     position: absolute;
     z-index: 2;
   }
