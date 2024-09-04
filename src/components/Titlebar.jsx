@@ -1,4 +1,3 @@
-// Titlebar.js
 const Titlebar = ({ text, className = "" }) => {
   return (
     <div

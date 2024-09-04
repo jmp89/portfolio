@@ -1,62 +1,59 @@
-import { FaDownload, FaGithub } from "react-icons/fa";
-import TextBox from "../components/TextBox";
+import ProjectCard from "../components/ProjectCard";
 import Titlebar from "../components/Titlebar";
 
 const Experience = () => {
+  const projects = [
+    {
+      title: "HackaVerse",
+      shortDescription: "Proyecto en equipo (SCRUM) sobre hackathones.",
+      longDescription:
+        "HackaVerse es un portal donde se publican hackathones. Permite el registro de usuarios, y, estos a su vez registrarse a los eventos o cancelar su inscripción. Una vez finalizados, el usuario puede puntuar si ha participado en ellos. Los administradores pueden crear y modificar los eventos, y una vez terminados, puede definir el podio de las competiciones.",
+      image: "https://api.hackaverse-pfb.com/media/logo_hackaverse.svg",
+      githubLink: "https://github.com/jmp89/hackatonPFB#readme",
+      websiteLink: "https://hackaverse-pfb.com/",
+      technologies: ["HTML5", "Tailwind", "React", "Node.js", "MySQL"],
+    },
+    {
+      title: "Movie Quiz",
+      shortDescription: "Proyecto en equipo sobre un quiz.",
+      longDescription:
+        "Movie Quiz es un juego de preguntas y respuestas es un proyecto desarrollado durante el bootcamp de programación web de HACK A BOSS. A partir del JSON con preguntas y respuestas proporcionado se crea la app incluyendo una serie de requisitos básicos a los que se añaden funcionalidades extra para mejorar la experiencia del jugador",
+      image:
+        "https://github.com/3dmnt/HAB-36-GrupoE/raw/main/img/Proyecto_preguntas_y_respuesrtas_JSB36RT.jpg",
+      githubLink: "https://github.com/3dmnt/HAB-36-GrupoE#readme",
+      websiteLink: "https://3dmnt.github.io/HAB-36-GrupoE/",
+      technologies: ["HTML5", "CSS3", "JavaScript"],
+    },
+    {
+      title: "Mi portfolio",
+      shortDescription: "Aunque no lo parezca, está hecho con mucho amor.",
+      longDescription:
+        "Este portfolio lo he desarrollado a modo de experimentar con diferentes cositas. Además he intentado dejarlo lo más reutilizable posible para quien quiera aprovecharlo :p",
+      image: "/logoJMP.webp",
+      githubLink: "https://github.com/jmp89/portfolio",
+      websiteLink: "https://www.jmp89dev.com",
+      technologies: ["HTML5", "CSS3", "Tailwind", "React"],
+    },
+    {
+      title: "Project Vacío",
+      shortDescription: "Haciendo pruebas.",
+      longDescription:
+        "He utilizado esta tarjeta para probar si me funcionaban los estilos condicionales en caso de no poner links del repositorio , la website o la imagen.",
+      image: "",
+      githubLink: "",
+      websiteLink: "",
+      technologies: ["Node.js", "MySQL", "Tailwind", "React"],
+    },
+  ];
+
   return (
     <>
-      <section className="relative p-8">
-        <Titlebar text={"EXPERIENCIA"} className={"-top-10"} />
-        <article>
-          <TextBox title={"HackaVerse"}>
-            <p className="pr-6">
-              Esta web consiste en un portal donde se gestionan y publican
-              Hackathones, donde hay distintas funcionalidades según el nivel
-              del usuario
-            </p>
-          </TextBox>
-          <nav className="mb-8">
-            <ul className="flex justify-start gap-4 mt-4">
-              <li className="hover:text-orange-500 cursor-pointer">
-                <a href="https://github.com/jmp89/hackatonPFB" target="_blank">
-                  <FaGithub size={"2rem"} />
-                </a>
-              </li>
-              <li>
-                <a href="https://hackaverse-pfb.com/" target="_blank">
-                  <button className="h-8 outline-dashed outline-1 py-1 px-3 rounded-3xl flex gap-1 hover:outline hover:text-orange-500 cursor-pointer">
-                    <FaDownload size={"1.3rem"} />
-                    Visitar web
-                  </button>
-                </a>
-              </li>
-            </ul>
-          </nav>
-        </article>
-        <article>
-          <TextBox title={"Portfolio de jmp89"}>
-            <p className="pr-6">
-              Así es, yo mismo desarrollé mi propio portfolio. Parece una
-              tontería, pero está hecho con mucho cariño
-            </p>
-          </TextBox>
-          <nav className="mb-8">
-            <ul className="flex justify-start gap-4 mt-4">
-              <li className="hover:text-orange-500 cursor-pointer">
-                <a href="https://github.com/jmp89/portfolio" target="_blank">
-                  <FaGithub size={"2rem"} />
-                </a>
-              </li>
-              <li>
-                <a href="https://jmp89dev.com/" target="_blank">
-                  <button className="h-8 outline-dashed outline-1 py-1 px-3 rounded-3xl flex gap-1 hover:outline hover:text-orange-500 cursor-pointer">
-                    <FaDownload size={"1.3rem"} />
-                    Visitar web
-                  </button>
-                </a>
-              </li>
-            </ul>
-          </nav>
+      <section className="relative p-8 xl:mt-20">
+        <Titlebar text={"EXPERIENCIA"} className={"-top-6 sm:-top-16"} />
+        <article className="flex flex-wrap gap-4 justify-center">
+          {projects.map((project, index) => (
+            <ProjectCard key={index} project={project} />
+          ))}
         </article>
       </section>
     </>

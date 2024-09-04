@@ -1,13 +1,17 @@
+// De librerias
 import { useRef } from "react";
 import { motion } from "framer-motion";
+// Las páginas (secciones en este caso por ser landing)
 import Home from "./pages/Home";
 import Contact from "./pages/Contact";
 import Achievements from "./pages/Achievements";
 import Experience from "./pages/Experience";
+// Componentes
 import Footer from "./components/Footer";
 import Header from "./components/Header";
-import useIntersectionObserver from "./hooks/useIntersectionObserver";
 import AnimatedSection from "./components/AnimatedSection";
+// Hooks
+import useIntersectionObserver from "./hooks/useIntersectionObserver";
 
 function App() {
   const homeRef = useRef(null);

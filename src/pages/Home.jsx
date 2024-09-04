@@ -21,7 +21,7 @@ const Home = () => {
 
   return (
     <>
-      <section className="max-w-screen-lg mx-auto px-4 flex items-center flex-col justify-center h-[80%] mt-28 gap-40 sm:gap-20 sm:mt-56 sm:space-y-64 sm:max-w-screen-sm xl:space-y-10 xl:space-x-8 xl:max-w-screen-xl xl:flex-row xl:mt-0 xl:mb-28 xl:h-full">
+      <section className="max-w-screen-lg mx-auto px-4 flex items-center flex-col justify-center h-[80%] mt-28 gap-40 sm:gap-20 sm:mt-56 sm:space-y-64 sm:max-w-screen-sm xl:space-y-10 xl:space-x-8 xl:max-w-screen-xl xl:flex-row xl:mt-0 xl:p-10 xl:mb-28 xl:h-full">
         <div className="flex-1 flex justify-center">
           <Banner3D />
         </div>
