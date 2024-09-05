@@ -29,13 +29,21 @@ function App() {
         <AnimatedSection id="home" ref={homeRef}>
           <Home />
         </AnimatedSection>
-        <AnimatedSection id="projects" ref={projectsRef}>
+        <AnimatedSection
+          id="projects"
+          ref={projectsRef}
+          className="bg-neutral-700 pt-10 sm:pt-0"
+        >
           <Projects />
         </AnimatedSection>
         <AnimatedSection id="achievements" ref={achievementsRef}>
           <Achievements />
         </AnimatedSection>
-        <AnimatedSection id="contact" ref={contactRef}>
+        <AnimatedSection
+          id="contact"
+          ref={contactRef}
+          className="bg-neutral-700 mt-10 py-10"
+        >
           <Contact />
         </AnimatedSection>
       </motion.main>

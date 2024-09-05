@@ -60,7 +60,7 @@ const Contact = () => {
 
   return (
     <>
-      <Titlebar text={"CONTACTO"} className={"-top-4"} />
+      <Titlebar text={"CONTACTO"} className={"top-4"} />
 
       <form
         onSubmit={handleSubmit}

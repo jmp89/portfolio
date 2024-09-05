@@ -18,8 +18,7 @@ const Projects = () => {
       shortDescription: "Proyecto en equipo sobre un quiz.",
       longDescription:
         "Movie Quiz es un juego de preguntas y respuestas es un proyecto desarrollado durante el bootcamp de programación web de HACK A BOSS. A partir del JSON con preguntas y respuestas proporcionado se crea la app incluyendo una serie de requisitos básicos a los que se añaden funcionalidades extra para mejorar la experiencia del jugador",
-      image:
-        "https://github.com/3dmnt/HAB-36-GrupoE/raw/main/img/Proyecto_preguntas_y_respuesrtas_JSB36RT.jpg",
+      image: "/moviequiz.png",
       githubLink: "https://github.com/3dmnt/HAB-36-GrupoE#readme",
       websiteLink: "https://3dmnt.github.io/HAB-36-GrupoE/",
       technologies: ["HTML5", "CSS3", "JavaScript"],

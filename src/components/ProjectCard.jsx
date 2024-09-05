@@ -17,7 +17,7 @@ const ProjectCard = ({ project }) => {
   return (
     <>
       <motion.div
-        className="bg-neutral-800 min-w-80 shadow-md rounded-lg overflow-hidden max-w-xs relative hover:bg-neutral-700"
+        className="bg-neutral-800 min-w-80 shadow-md rounded-lg overflow-hidden max-w-xs relative"
         whileHover={{ scale: 0.95 }}
       >
         <div className="relative ">
