@@ -1,5 +1,5 @@
 import { useState } from "react";
-import ReCAPTCHA from "react-google-recaptcha";
+// import ReCAPTCHA from "react-google-recaptcha";
 import emailjs from "emailjs-com";
 import Input from "../components/Input";
 import Titlebar from "../components/Titlebar";
@@ -10,23 +10,23 @@ const Contact = () => {
     email: "",
     message: "",
   });
-  const [captchaValue, setCaptchaValue] = useState(null);
-  const [captchaError, setCaptchaError] = useState(false);
+  // const [captchaValue, setCaptchaValue] = useState(null);
+  // const [captchaError, setCaptchaError] = useState(false);
 
   // Maneja el cambio en el reCAPTCHA
-  const handleCaptchaChange = (value) => {
-    setCaptchaValue(value);
-    setCaptchaError(false);
-  };
+  // const handleCaptchaChange = (value) => {
+  //   setCaptchaValue(value);
+  //   setCaptchaError(false);
+  // };
 
   // Maneja el envío del formulario
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    if (!captchaValue) {
-      setCaptchaError(true);
-      return;
-    }
+    // if (!captchaValue) {
+    //   setCaptchaError(true);
+    //   return;
+    // }
 
     // Envía el correo electrónico a través de EmailJS
     emailjs
@@ -49,7 +49,7 @@ const Contact = () => {
             email: "",
             message: "",
           });
-          setCaptchaValue(null); // Limpiar el CAPTCHA
+          // setCaptchaValue(null);
         },
         (error) => {
           console.log(error.text);
@@ -90,19 +90,19 @@ const Contact = () => {
             setFormState({ ...formState, message: e.target.value })
           }
         />
+        {/*
+        ME FALLA EN PRODUCCION, PROXIMAMENTE DISPONIBLE
         <ReCAPTCHA
           sitekey={import.meta.env.VITE_RECAPTCHA_SITE_KEY}
           onChange={handleCaptchaChange}
         />
         {captchaError && (
           <p className="text-red-500">Por favor, completa el CAPTCHA.</p>
-        )}
+        )} */}
         <button
           type="submit"
-          className={`bg-orange-500 text-white px-4 py-2 rounded hover:scale-95 ${
-            !captchaValue ? "opacity-50 cursor-not-allowed" : ""
-          }`}
-          disabled={!captchaValue}
+          className={`bg-orange-500 text-white px-4 py-2 rounded hover:scale-95`}
+          // disabled={!captchaValue}
         >
           ¡Contrátame!
         </button>
