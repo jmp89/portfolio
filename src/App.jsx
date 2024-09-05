@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import Home from "./pages/Home";
 import Contact from "./pages/Contact";
 import Achievements from "./pages/Achievements";
-import Experience from "./pages/Experience";
+import Projects from "./pages/Projects";
 // Componentes
 import Footer from "./components/Footer";
 import Header from "./components/Header";
@@ -15,11 +15,11 @@ import useIntersectionObserver from "./hooks/useIntersectionObserver";
 
 function App() {
   const homeRef = useRef(null);
-  const experienceRef = useRef(null);
+  const projectsRef = useRef(null);
   const achievementsRef = useRef(null);
   const contactRef = useRef(null);
 
-  const sectionRefs = [homeRef, experienceRef, achievementsRef, contactRef];
+  const sectionRefs = [homeRef, projectsRef, achievementsRef, contactRef];
   const activeId = useIntersectionObserver(sectionRefs);
 
   return (
@@ -29,8 +29,8 @@ function App() {
         <AnimatedSection id="home" ref={homeRef}>
           <Home />
         </AnimatedSection>
-        <AnimatedSection id="experience" ref={experienceRef}>
-          <Experience />
+        <AnimatedSection id="projects" ref={projectsRef}>
+          <Projects />
         </AnimatedSection>
         <AnimatedSection id="achievements" ref={achievementsRef}>
           <Achievements />

@@ -1,7 +1,7 @@
 import ProjectCard from "../components/ProjectCard";
 import Titlebar from "../components/Titlebar";
 
-const Experience = () => {
+const Projects = () => {
   const projects = [
     {
       title: "HackaVerse",
@@ -31,11 +31,11 @@ const Experience = () => {
         "Este portfolio lo he desarrollado a modo de experimentar con diferentes cositas. Además he intentado dejarlo lo más reutilizable posible para quien quiera aprovecharlo :p",
       image: "/logoJMP.webp",
       githubLink: "https://github.com/jmp89/portfolio",
-      websiteLink: "https://www.jmp89dev.com",
+      websiteLink: "",
       technologies: ["HTML5", "CSS3", "Tailwind", "React"],
     },
     {
-      title: "Project Vacío",
+      title: "Proyecto vacío",
       shortDescription: "Haciendo pruebas.",
       longDescription:
         "He utilizado esta tarjeta para probar si me funcionaban los estilos condicionales en caso de no poner links del repositorio , la website o la imagen.",
@@ -49,7 +49,7 @@ const Experience = () => {
   return (
     <>
       <section className="relative p-8 xl:mt-20">
-        <Titlebar text={"EXPERIENCIA"} className={"-top-6 sm:-top-16"} />
+        <Titlebar text={"PROYECTOS"} className={"-top-6 sm:-top-16"} />
         <article className="flex flex-wrap gap-4 justify-center">
           {projects.map((project, index) => (
             <ProjectCard key={index} project={project} />
@@ -59,4 +59,4 @@ const Experience = () => {
     </>
   );
 };
-export default Experience;
+export default Projects;

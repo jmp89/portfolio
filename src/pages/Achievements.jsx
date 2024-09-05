@@ -1,50 +1,69 @@
-import { FaDownload, FaGithub } from "react-icons/fa";
+import AnimatedSection from "../components/AnimatedSection";
 import Titlebar from "../components/Titlebar";
-import TextBox from "../components/TextBox";
+import { motion } from "framer-motion";
 
 const Achievements = () => {
+  const studies = [
+    {
+      title: "Equivalencia bachillerato (nivel 3)",
+      details: "IES Vecindario (2023)",
+    },
+    {
+      title: "Certificado desarrollador full stack developer",
+      details: "HACK A BOSS (2024)",
+    },
+    {
+      title: "Certificado de desarrollo de mini app",
+      details: "HACK A BOSS (2024)",
+    },
+    {
+      title: "Certificado de aptitud en pruebas técnicas",
+      details: "HACK A BOSS (2024)",
+    },
+    {
+      title: "Certificado de aprovechamiento y asistencia",
+      details: "HACK A BOSS (2024)",
+    },
+  ];
+
   return (
-    <section className="relative p-8">
-      <Titlebar text={"ESTUDIOS"} className={"-top-10"} />
-      {[...Array(7)].map((_, index) => (
-        <article key={index}>
-          <TextBox title={"Portfolio de Noelia Suárez Asistente virtual"}>
-            <p className="pr-6">
-              Un portfolio, de tipo landing page en el que la misma clienta me
-              presentó el diseño, y yo se lo llevé a código.
-            </p>
-          </TextBox>
-          <nav className="mb-8">
-            <ul className="flex justify-start gap-4 mt-4">
-              <li className="hover:text-orange-500 cursor-pointer">
-                <a
-                  href="https://github.com/jmp89/noeliasuarezav"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <FaGithub size={"2rem"} />
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://noeliasuarezav.com/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <button
-                    className="h-8 outline-dashed outline-1 py-1 px-3 rounded-3xl flex gap-1 hover:outline hover:text-orange-500 opacity-50 cursor-not-allowed"
-                    disabled
-                  >
-                    <FaDownload size={"1.3rem"} />
-                    Visitar web
-                  </button>
-                </a>
-              </li>
-            </ul>
-          </nav>
-        </article>
-      ))}
-    </section>
+    <>
+      <Titlebar text={"ESTUDIOS"} className={"-top-6 sm:-top-16"} />
+      <div className="relative w-full mt-10">
+        {/* Línea central del timeline */}
+        <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-1 h-full bg-gray-400"></div>
+        <div className="flex flex-col space-y-8">
+          {studies.map((study, index) => (
+            <motion.div
+              key={index}
+              className={`relative flex ${
+                index % 2 === 0
+                  ? "justify-start sm:ml-20"
+                  : "justify-end sm:-ml-20"
+              } w-full`}
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+            >
+              {/* Punto del timeline */}
+              <div
+                className={`absolute left-1/2 transform -translate-x-1/2 w-6 h-6 rounded-full bg-orange-500 z-10 ${
+                  index % 2 === 0 ? "sm:-ml-20" : "sm:ml-20"
+                }`}
+              ></div>
+              <article
+                className={`relative w-5/12 p-4 shadow-md bg-gray-400 text-neutral-800 rounded-lg ${
+                  index % 2 === 0 ? "mr-2 text-right" : "ml-2 text-left"
+                }`}
+              >
+                <h3 className="text-lg font-semibold">{study.title}</h3>
+                <p>{study.details}</p>
+              </article>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+    </>
   );
 };
 
