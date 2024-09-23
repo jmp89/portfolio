@@ -155,6 +155,12 @@ const ProjectCard = ({ project }) => {
                 {project.technologies.includes("MySQL") && (
                   <SiMysql className="text-blue-700 text-2xl" />
                 )}
+                {project.technologies.includes("WordPress") && (
+                  <FaWordpress className="text-blue-600 text-2xl" />
+                )}
+                {project.technologies.includes("PHP") && (
+                  <FaPhp className="text-indigo-500 text-2xl" />
+                )}
               </div>
               <div className="flex items-center justify-between mt-4">
                 <a

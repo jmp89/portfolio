@@ -43,16 +43,16 @@ const Projects = () => {
       websiteLink: "https://rifamelo.com",
       technologies: ["WordPress", "PHP", "JavaScript", "CSS3"],
     },
-    {
-      title: "Proyecto vacío",
-      shortDescription: "Haciendo pruebas.",
-      longDescription:
-        "He utilizado esta tarjeta para probar si me funcionaban los estilos condicionales en caso de no poner links del repositorio , la website o la imagen.",
-      image: "",
-      githubLink: "",
-      websiteLink: "",
-      technologies: ["Node.js", "MySQL", "Tailwind", "React"],
-    },
+    // {
+    //   title: "Proyecto vacío",
+    //   shortDescription: "Haciendo pruebas.",
+    //   longDescription:
+    //     "He utilizado esta tarjeta para probar si me funcionaban los estilos condicionales en caso de no poner links del repositorio , la website o la imagen.",
+    //   image: "",
+    //   githubLink: "",
+    //   websiteLink: "",
+    //   technologies: ["Node.js", "MySQL", "Tailwind", "React"],
+    // },
   ];
 
   return (
