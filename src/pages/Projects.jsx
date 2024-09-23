@@ -34,6 +34,16 @@ const Projects = () => {
       technologies: ["HTML5", "CSS3", "Tailwind", "React"],
     },
     {
+      title: "Rifamelo",
+      shortDescription: "Un adelanto a un futuro gran proyecto.",
+      longDescription:
+        "Rifamelo es un proyecto personal, diseñado por mi mujer, es una app que permite a empresas poner sus propios productos en un sistema de rifas a través de esta herramienta. Por ver la viabilidad del proyecto, está sacado en WordPress, para un futuro planeo pasarla a React + Vite, con TailwindCSS, Nodejs y MySQL",
+      image: "/rifamelo.png",
+      githubLink: "https://rifamelo.com",
+      websiteLink: "",
+      technologies: ["WordPress", "PHP", "JavaScript", "CSS3"],
+    },
+    {
       title: "Proyecto vacío",
       shortDescription: "Haciendo pruebas.",
       longDescription:
