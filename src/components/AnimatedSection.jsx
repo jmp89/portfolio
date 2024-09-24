@@ -9,7 +9,7 @@ const AnimatedSection = forwardRef(({ id, children, className = "" }, ref) => {
       ref={ref}
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
-      viewport={{ once: false, amount: 0.1, margin: "-50px 0px" }}
+      viewport={{ once: true, amount: 0.1 }} // Cambiado a once: true
       transition={{ duration: 0.5 }}
     >
       {children}
